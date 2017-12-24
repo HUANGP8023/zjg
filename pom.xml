@@ -32,6 +32,8 @@
 		
 		<ehcache.version>2.6.5</ehcache.version>
 		
+		<jcaptcha.version>1.0-RC6</jcaptcha.version>
+		
 	</properties>
 	<dependencies>
 		<!-- spring核心包 -->
@@ -188,6 +190,20 @@
 			<version>${shiro.version}</version>
 		</dependency>
 		<!-- SECURITY end -->
+		<!-- jcaptcha验证码 -->
+		<dependency>
+			<groupId>com.octo.captcha</groupId>
+			<artifactId>jcaptcha-all</artifactId>
+			<version>${jcaptcha.version}</version>
+		</dependency>
+		<!-- SPRINGSIDE MODULES begin -->
+		<dependency>
+			<groupId>org.springside</groupId>
+			<artifactId>springside-core</artifactId>
+			<version>${springside.version}</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/main/webapp/WEB-INF/lib/springside-core-4.1.0-SNAPSHOT.jar</systemPath>
+		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
