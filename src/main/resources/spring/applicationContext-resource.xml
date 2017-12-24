@@ -16,6 +16,7 @@
 			<property name="locations">
 				<list>
 					<value>classpath*:/config.dev.properties</value>
+					<value>classpath*:/redis.dev.properties</value>
 				</list>
 			</property>
 		</bean>
@@ -26,6 +27,7 @@
 			<property name="locations">
 				<list>
 					<value>classpath*:/config.test.properties</value>
+					<value>classpath*:/redis.test.properties</value>
 				</list>
 			</property>
 		</bean>
@@ -36,6 +38,7 @@
 			<property name="locations">
 				<list>
 					<value>classpath*:/config.producation.properties</value>
+					<value>classpath*:/redis.producation.properties</value>
 				</list>
 			</property>
 		</bean>
