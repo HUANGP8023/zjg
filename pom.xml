@@ -28,6 +28,10 @@
 		<!-- junit版本号 -->
 		<junit.version>4.11</junit.version>
 		
+		<shiro.version>1.2.1</shiro.version>
+		
+		<ehcache.version>2.6.5</ehcache.version>
+		
 	</properties>
 	<dependencies>
 		<!-- spring核心包 -->
@@ -162,6 +166,28 @@
 			<version>${slf4j.version}</version>
 		</dependency>
 		<!-- log end -->
+		<!-- SECURITY begin -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-web</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-ehcache</artifactId>
+			<version>${shiro.version}</version>
+		</dependency>
+		<!-- SECURITY end -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
