@@ -13,11 +13,13 @@ import org.mybatis.generator.exception.InvalidConfigurationException;
 import org.mybatis.generator.exception.XMLParserException;
 import org.mybatis.generator.internal.DefaultShellCallback;
 
+import com.stkj.util.MySelfBatisGenerator;
+
 public class Generator {
     public static void main(String[] args) {
         List<String> warnings = new ArrayList<String>();
         boolean overwrite = true;
-        File configFile = new File(System.getProperty("user.dir")+"/src/test/resources/generatorConfig.xml");
+        File configFile = new File(System.getProperty("user.dir").concat("/src/test/resources/generatorConfig.xml"));
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = null;
         try {
@@ -28,9 +30,9 @@ public class Generator {
             e.printStackTrace();
         }
         DefaultShellCallback callback = new DefaultShellCallback(overwrite);
-        MyBatisGenerator myBatisGenerator = null;
+        MySelfBatisGenerator myBatisGenerator = null;
         try {
-            myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
+            myBatisGenerator = new MySelfBatisGenerator(config, callback, warnings);
         } catch (InvalidConfigurationException e) {
             e.printStackTrace();
         }
